@@ -1,3 +1,9 @@
-current_branch := $(shell git rev-parse --abbrev-ref HEAD)
+current_branch := 2.3.8
 build:
-	docker build -t bde2020/hive:$(current_branch) ./
+	docker build -t hive:$(current_branch) ./
+
+start:
+	docker compose up
+
+stop:
+	docker compose down
