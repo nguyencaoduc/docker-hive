@@ -1,4 +1,5 @@
-FROM hadoop-base:2.0.0-hadoop2.7.4-java8
+ARG HADOOP_TAG
+FROM hadoop-base:${HADOOP_TAG}
 
 # Allow buildtime config of HIVE_VERSION
 ARG HIVE_VERSION
